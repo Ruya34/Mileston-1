@@ -30,7 +30,7 @@ public class Main extends Application {
         VBox topBox = new VBox(5, courseLabel, groupLabel);
         topBox.setAlignment(Pos.TOP_CENTER);
 
-// Loading text
+
         Label loadingLabel = new Label("Loading, please wait...");
 
 // Splash image (background)
@@ -47,7 +47,7 @@ public class Main extends Application {
 
         StackPane.setAlignment(topBox, Pos.TOP_CENTER);
         StackPane.setAlignment(loadingLabel, Pos.BOTTOM_CENTER);
-//
+
 //// Create scene (only once)
             Scene splashScene = new Scene(splashLayout, 600, 400);
             splashStage.setScene(splashScene);
@@ -55,7 +55,7 @@ public class Main extends Application {
             splashStage.show();
 
 
-        // Simulate loading task (e.g. load data, init resources)
+        // Simulate loading task
         Task<Void> loadTask = new Task<>() {
             @Override
             protected Void call() throws Exception {
@@ -98,3 +98,4 @@ public class Main extends Application {
         launch(args);
     }
 }
+
